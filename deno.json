@@ -4,6 +4,16 @@
     "unsafe-proto",
     "sloppy-imports"
   ],
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "strict": true,
+    "jsx": "preserve",
+    "types": ["@types/deno"]
+  },
   "tasks": {
     "dev": "deno run -A --unstable-detect-cjs npm:next@latest dev",
     "build": "deno run -A --unstable-detect-cjs npm:next@latest build",

@@ -1,22 +1,23 @@
 import { GameStateManager } from "@utils/GameStateManager.ts";
 
 const instance = GameStateManager.new();
+
 export async function GET() {
-  const result = await instance.save();
+  const result = await instance.load();
 
   if (result instanceof Error) {
     return Response.json({ message: result.message }, { status: 404 });
   }
 
-  return Response.json({ message: "Save successful." });
+  return Response.json({ message: "Load successful." });
 }
 
 export async function POST() {
-  const result = await instance.save();
+  const result = await instance.load();
 
   if (result instanceof Error) {
     return Response.json({ message: result.message }, { status: 404 });
   }
 
-  return Response.json({ message: "Save successful." });
+  return Response.json({ message: "Load successful." });
 }

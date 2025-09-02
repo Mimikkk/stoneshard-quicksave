@@ -1,5 +1,16 @@
-import { config } from "@utils/config.ts";
-
 export function GET() {
-  return Response.json({ message: "Hello, world!", path: config.CharacterLocationPath! });
+  return Response.json({
+    routes: [
+      {
+        path: "/api/load",
+        method: "GET",
+        description: "Load the game state",
+      },
+      {
+        path: "/api/save",
+        method: "GET",
+        description: "Save the game state",
+      },
+    ],
+  });
 }
