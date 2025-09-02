@@ -14,6 +14,7 @@ const useCanSave = () =>
   useQuery({
     queryKey: ["canSave"],
     queryFn: () => fetch_("/api/can-save", { method: "GET" }).then((res) => res.json()).then((res) => res.canSave),
+    refetchInterval: 1000,
   });
 
 const useLoad = () => useMutation({ mutationFn: () => fetch_("/api/load", { method: "POST" }) });
@@ -22,6 +23,7 @@ const useCanLoad = () =>
   useQuery({
     queryKey: ["canLoad"],
     queryFn: () => fetch_("/api/can-load", { method: "GET" }).then((res) => res.json()).then((res) => res.canLoad),
+    refetchInterval: 1000,
   });
 
 function Home() {
