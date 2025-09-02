@@ -3,6 +3,10 @@ import path from "node:path";
 import { config } from "./config.ts";
 
 const isDirectory = async (path: string): Promise<boolean> => {
+  if (!fs.existsSync(path)) {
+    return false;
+  }
+
   return (await Deno.stat(path)).isDirectory;
 };
 
@@ -81,11 +85,11 @@ export class GameStateManager {
     return await isDirectory(this.characterUrl);
   }
 
-  private async isExitsaveAvailable(): Promise<boolean> {
+  async isExitsaveAvailable(): Promise<boolean> {
     return await isDirectory(this.exitsavePath());
   }
 
-  private async isQuicksaveAvailable(): Promise<boolean> {
+  async isQuicksaveAvailable(): Promise<boolean> {
     return await isDirectory(this.quicksavePath());
   }
 }

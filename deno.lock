@@ -3,6 +3,7 @@
   "specifiers": {
     "npm:@next/env@15.5.2": "15.5.2",
     "npm:@tailwindcss/postcss@^4.1.12": "4.1.12",
+    "npm:@tanstack/react-query@^5.85.9": "5.85.9_react@19.1.0",
     "npm:@types/deno@^2.3.0": "2.3.0",
     "npm:@types/react-dom@19": "19.1.9_@types+react@19.1.12",
     "npm:@types/react@19": "19.1.12",
@@ -376,6 +377,16 @@
         "tailwindcss"
       ]
     },
+    "@tanstack/query-core@5.85.9": {
+      "integrity": "sha512-5fxb9vwyftYE6KFLhhhDyLr8NO75+Wpu7pmTo+TkwKmMX2oxZDoLwcqGP8ItKSpUMwk3urWgQDZfyWr5Jm9LsQ=="
+    },
+    "@tanstack/react-query@5.85.9_react@19.1.0": {
+      "integrity": "sha512-2T5zgSpcOZXGkH/UObIbIkGmUPQqZqn7esVQFXLOze622h4spgWf5jmvrqAo9dnI13/hyMcNsF1jsoDcb59nJQ==",
+      "dependencies": [
+        "@tanstack/query-core",
+        "react"
+      ]
+    },
     "@tybys/wasm-util@0.10.0": {
       "integrity": "sha512-VyyPYFlOMNylG45GoAe0xDoLwWuowvf92F9kySqzYh8vmYm7D2u4iUJKa1tOUpS70Ku13ASrOkS4ScXFsTaCNQ==",
       "dependencies": [
@@ -685,6 +696,7 @@
       "dependencies": [
         "npm:@next/env@15.5.2",
         "npm:@tailwindcss/postcss@^4.1.12",
+        "npm:@tanstack/react-query@^5.85.9",
         "npm:@types/deno@^2.3.0",
         "npm:@types/react-dom@19",
         "npm:@types/react@19",
