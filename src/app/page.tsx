@@ -38,14 +38,12 @@ function Home() {
     load();
   }, [load]);
 
-  console.log({ isSaveError, isLoadError });
-
   return (
     <div className="container m-auto flex justify-center items-center w-full h-full">
       <div className="flex flex-col gap-2 h-full justify-center">
         <div className="flex flex-col gap-2">
-          <p className="text-2xl font-bold">Stoneshard Quicksave</p>
-          <p className="text-sm">Save and load your game state</p>
+          <p className="text-2xl font-bold [@media(max-height:75px)]:hidden">Stoneshard Quicksave</p>
+          <p className="text-sm [@media(max-height:100px)]:hidden">Save and load your game state</p>
           <div className="flex items-center gap-2">
             <button
               className="px-2 bg-sky-700 h-8 w-24 disabled:bg-gray-500"
