@@ -1,0 +1,29 @@
+{
+  "nodeModulesDir": "auto",
+  "unstable": [
+    "unsafe-proto",
+    "sloppy-imports"
+  ],
+  "tasks": {
+    "dev": "deno run -A --unstable-detect-cjs npm:next@latest dev",
+    "build": "deno run -A --unstable-detect-cjs npm:next@latest build",
+    "start": "deno run -A --unstable-detect-cjs npm:next@latest start"
+  },
+  "fmt": {
+    "options": {
+      "useTabs": false,
+      "lineWidth": 120,
+      "indentWidth": 2,
+      "singleQuote": false,
+      "proseWrap": "preserve"
+    },
+    "files": {
+      "include": ["src/", "deno.json"],
+      "exclude": ["node_modules/", "dist/", "vendor/"]
+    }
+  },
+  "imports": {
+    "@api/": "./src/app/api/",
+    "@utils/": "./src/app/utils/"
+  }
+}
