@@ -46,7 +46,7 @@ function Home() {
           <p className="text-sm [@media(max-height:100px)]:hidden">Save and load your game state</p>
           <div className="flex items-center gap-2">
             <button
-              className="px-2 bg-sky-700 h-8 w-24 disabled:bg-gray-500"
+              className="px-2 bg-sky-700 hover:bg-sky-600 active:bg-sky-500 h-8 w-24 disabled:bg-gray-500 cursor-pointer disabled:cursor-not-allowed"
               type="button"
               disabled={isSaving || !canSave}
               onClick={handleSave}
@@ -54,7 +54,7 @@ function Home() {
               {isSaving ? "Saving..." : "Save"}
             </button>
             <button
-              className="px-2 bg-sky-700 h-8 w-24 disabled:bg-gray-500"
+              className="px-2 bg-sky-700 hover:bg-sky-600 active:bg-sky-500 h-8 w-24 disabled:bg-gray-500 cursor-pointer disabled:cursor-not-allowed"
               type="button"
               disabled={isLoading || !canLoad}
               onClick={handleLoad}
